@@ -1,0 +1,363 @@
+﻿<div class="row">
+    <div class="col-12 col-lg-10 mx-auto">
+
+        <div class="card">
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold pt-0" data-bs-toggle="tab" href="#tbProjectSettings" role="tab">Project Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbProjSettingsStatus" role="tab">Project Status Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold pt-0" data-bs-toggle="tab" href="#tbProjCategory" role="tab">Category</a>
+                    </li>
+                </ul>
+            </div><!--end card-body-->
+            <div class="card-body pt-0">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tbProjectSettings" role="tabpanel">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"> Project Settings</h4>
+                            </div><!--end card-header-->
+
+                            <div class="card-body">
+                                <div class="form-group mb-3">
+                                    <div class="mb-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="InlineCheckbox" data-parsley-multiple="groups" data-parsley-mincheck="2">
+                                            <label class="custom-control-label" for="InlineCheckbox">Send Reminder</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row" style="display : none;" id="ti">
+                                    <label class="col-md-3 my-2 control-label">Send Reminders To</label>
+                                    <div class="col-md-9">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="projRadios" id="adminRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="adminRadios1">
+                                                Administrators
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="projRadios" id="projMemRadios2" value="option2">
+                                            <label class="form-check-label" for="projMemRadios2">
+                                                Project Members
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="projRadios" id="allRadios3" value="option3">
+                                            <label class="form-check-label" for="allRadios3">
+                                                All
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <label class="col-md-3 my-2 control-label">Remind Before</label>
+
+                                    <div class="input-group col-md-3 ">
+                                        <input type="text" class="form-control col-md-3" aria-describedby="proj-days">
+                                        <span class="input-group-text" id="proj-days">days</span>
+                                    </div>
+
+
+                                </div> <!-- end row -->
+                                <div class="row">
+                                    <div class="col-md-12 text-start">
+                                        <button type="button" class="btn btn-de-primary">Save</button>
+                                    </div>
+                                </div>
+
+                            </div><!--end card-body-->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="tbProjSettingsStatus" role="tabpanel">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Project Status Settings</h4>
+                                    </div><!--end col-->
+
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                
+                                <!--status Setting Modal Start-->
+                                    <div class="modal fade" id="Status" tabindex="-1" aria-labelledby="StatusLabel" aria-hidden="true" style="display: none;">
+                                        <div class="modal-dialog modal-xl">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h6 class="modal-title m-0" id="StatusLabel">Edit Project Status</h6>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 g-2">
+                                                            <div class="mb-3 text-start">
+                                                                <label for="example-text-input">
+                                                                     Name <span class="f-14 mr-1 text-danger">*</span>
+
+                                                                </label>
+                                                                <input class="form-control" type="text" value="" id="example-text-input">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 g-2">
+                                                            <div class="mb-3 text-start">
+                                                                <label for="example-text-input">
+                                                                    Label Color
+                                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                                </label>
+                                                                <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#0b51b7" title="Choose your color">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 g-2">
+                                                            <div class="mb-3 text-start">
+                                                                <label for="example-text-input">
+                                                                    Status
+                                                                    
+                                                                </label><br />
+                                                            <div class="form-check form-check-inline mt-1">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                                <label class="form-check-label" for="inlineRadio1">Active</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline mt-1">
+                                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                                <label class="form-check-label" for="inlineRadio2">Inactive</label>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div><!--end card-body-->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                                                    <button class="btn btn-de-primary btn-sm" type="button">Save</button>
+                                                </div><!--end modal-footer-->
+                                            </div><!--end modal-content-->
+                                        </div><!--end modal-dialog-->
+                                    </div><!--end modal-->
+                                <!--status Setting Modal end-->
+
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Default Status</th>
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>In-Progress</td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1">
+                                                        <label class="form-check-label" for="projRadios1">
+                                                            Default
+                                                        </label>
+                                                    </div>
+                                                </td>
+
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#Status"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Not Started</td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1">
+                                                        <label class="form-check-label" for="projRadios1">
+                                                            Default
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#Status"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>3</td>
+                                                <td>On Hold</td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="projRadios" id="projRadios1" value="option1">
+                                                        <label class="form-check-label" for="projRadios1">
+                                                            Default
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#Status"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div>
+
+
+                    <div class="tab-pane" id="tbProjCategory" role="tabpanel">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h4 class="card-title">Category</h4>
+                                    </div><!--end col-->
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-de-primary" data-bs-toggle="modal" data-animation="bounce" data-bs-target=".bs-NewCategory-modal-lg">New Project Category </button>
+                                    </div><!--end col-->
+                                </div>  <!--end row-->
+                            </div><!--end card-header-->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Category Name</th>
+                                                <th>Action</th>
+                                            </tr><!--end tr-->
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Reseller 1</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#Category"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Reseller 2</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#Category"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Reseller 3</td>
+                                                <td>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#Category"><i class="las la-pen text-secondary font-16"></i></a>
+                                                    <a href="#"><i class="las la-trash-alt text-secondary font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!--end card-body-->
+                        </div>
+                    </div>
+
+                    <!--  Modal content for New Project Category -->
+                    <div class="modal fade bs-NewCategory-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myProjCategeoryModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title mt-0" id="myProjCategeoryModalLabel">New Project Category</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="form-label my-2" for="ProjCategoryName">Category Name
+                                                        <span class="f-14 mr-1 text-danger">*</span>
+                                                    </label>
+                                                    <input type="text" class="form-control" id="CategoryName" required="">
+                                                </div>
+                                            </div>
+
+                                        </div><!--end row-->
+
+                                        <div class="row">
+                                            <div class="col-md-12 text-end">
+                                                <button type="button" class="btn btn-sm btn-de-primary">Save</button>
+                                                <button type="button" class="btn btn-sm btn-de-danger" data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                    <!--  Modal content for Edit Project Category -->
+
+                    <div class="modal fade" id="Category" tabindex="-1" aria-labelledby="CategoryLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6 class="modal-title m-0" id="StatusLabel">Edit Category</h6>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-12 g-2">
+                                            <div class="mb-3 text-start">
+                                                <label class="form-label " for="ProjCategoryName">Category Name
+                                                    <span class="f-14 mr-1 text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="CategoryName" required="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--end card-body-->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-de-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                                    <button class="btn btn-de-primary btn-sm" type="button">Save</button>
+                                </div><!--end modal-footer-->
+                            </div><!--end modal-content-->
+                        </div><!--end modal-dialog-->
+                    </div><!--end modal-->
+
+
+                </div>
+            </div><!--end card-body-->
+        </div><!--end card-->
+
+    </div>
+</div>
+
+<script>
+    // Select the checkbox and the textbox container
+    const checkbox = document.getElementById("InlineCheckbox");
+    const textboxContainer = document.getElementById("ti");
+
+    // Add event listener for checkbox
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        // Show the textbox container when checkbox is checked
+        textboxContainer.style.display = "block";
+      } else {
+        // Hide the textbox container when checkbox is unchecked
+        textboxContainer.style.display = "none";
+      }
+    });
+</script>

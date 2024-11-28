@@ -1,0 +1,90 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h4>Message Settings</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 g-2">
+                <div class="mb-3 row">
+                    <div class="col-sm-12">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="allowce" value="1">
+                            <label class="form-check-label" for="allowce">Allow Chat between client and employee</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row" id="belowone" style="display: none;">
+                    <div class="col-sm-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="allowce1" value="option1">
+                            <label class="form-check-label" for="allowce1">All</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="onlymemcli" value="onlymemcli">
+                            <label class="form-check-label" for="onlymemcli">Only project members can chat with client</label>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+           
+            <div class="col-lg-6 g-2">
+                <div class="mb-3 row">
+                    <div class="col-sm-12">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="allowcliad" value="allowcliad">
+                            <label class="form-check-label" for="allowcliad">Allow chat between client and admin</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 g-2">
+                <div class="mb-3 row">
+                    <label for="sendnoti" class="col-sm-5 col-form-label">
+                        Send Sound Notification Alert
+
+                    </label>
+                    <div class="col-sm-7">
+
+                        <select class="form-select" aria-label="Default select example"id="sendnoti">
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-primary ms-5 "><i class="mdi mdi-check-all me-2"></i>Save</button>
+    </div>
+</div>
+
+
+
+
+<script>
+    // Select the checkbox and the textbox container
+    const checkbox = document.getElementById("allowce");
+    const textboxContainer = document.getElementById("belowone");
+
+    // Add event listener for checkbox
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        // Show the textbox container when checkbox is checked
+        textboxContainer.style.display = "block";
+      } else {
+        // Hide the textbox container when checkbox is unchecked
+        textboxContainer.style.display = "none";
+      }
+    });
+</script>

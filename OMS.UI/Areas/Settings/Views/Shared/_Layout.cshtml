@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Office Management System</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="Premium Office Management System by Aviv Solutions Inc" name="description" />
+    <meta content="Firstlin s Joseph" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App css -->
+    <link href="~/matrica/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/matrica/assets/css/app-font.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+    <!-- leftbar-tab-menu -->
+    <div class="leftbar-tab-menu">
+        <div class="main-icon-menu">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="logo logo-metrica d-block text-center">
+                <span>
+                    <img src="~/matrica/assets/images/logo-sm.png" alt="logo-small" class="logo-sm" />
+                </span>
+            </a>
+            <div class="main-icon-menu-body">
+                <div class="position-reletive h-100" data-simplebar style="overflow-x: hidden;">
+                    <ul class="nav nav-tabs" role="tablist" id="tab-menu">
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard" data-bs-trigger="hover">
+                            <a href="#SettingsDashboard" id="dashboard-tab" class="nav-link">
+                                <i class="ti ti-smart-home menu-icon"></i>
+                            </a><!--end nav-link-->
+                        </li><!--end nav-item-->
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Settings" data-bs-trigger="hover">
+                            <a href="#AvivSettings" id="settings-tab" class="nav-link">
+                                <i class="mdi mdi-settings-outline menu-icon"></i>
+                            </a><!--end nav-link-->
+                        </li><!--end nav-item-->
+                    </ul><!--end nav-->
+                </div><!--end /div-->
+            </div><!--end main-icon-menu-body-->
+            <div class="pro-metrica-end">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="profile">
+                    <img src="~/matrica/assets/images/users/user-3.jpg" alt="profile-user" class="rounded-circle thumb-sm">
+                </a>
+            </div><!--end pro-metrica-end-->
+        </div>
+        <!--end main-icon-menu-->
+
+        <div class="main-menu-inner">
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
+                    <span>
+                        Office System
+                    </span>
+                </a><!--end logo-->
+            </div><!--end topbar-left-->
+            <!--end logo-->
+            <div class="menu-body navbar-vertical tab-content" data-simplebar>
+                <div id="SettingsDashboard" class="main-icon-menu-pane tab-pane" role="tabpanel"
+                     aria-labelledby="dasboard-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Dashboard</h6>
+                    </div>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="nav-link">Home</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="crypto-index.html">Crypto</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="crm-index.html">CRM</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects-index.html">Project</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="ecommerce-index.html">Ecommerce</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="helpdesk-index.html">Helpdesk</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="hospital-index.html">Hospital</a>
+                        </li><!--end nav-item-->
+                    </ul><!--end nav-->
+                </div><!-- end Dashboards -->
+
+                <div id="AvivSettings" class="main-icon-menu-pane tab-pane" role="tabpanel"
+                     aria-labelledby="settings-tab">
+                    <div class="title-box">
+                        <h6 class="menu-title">Settings</h6>
+                    </div>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Common Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Consumer">Consumer Settings</a>
+                        </li><!--end nav-item--> 
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Planning">Planning Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Company">Company Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="BusinessAddress">Business Location</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Department">Department Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Designation">Designation Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Settings" asp-action="Application">App Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Profile" asp-action="Index">Profile Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Notifications">Notification Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Currency">Currency Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Payment">Payment Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Finance">Finance Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Contract">Contract Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Tax">Tax Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Support" asp-action="Ticket">Ticket Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Project" asp-action="Index">Project Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Attendance">Attendance Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="LeavesType">Leaves Settings</a>
+                        </li><!--end nav-item-->                        
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Roles">Roles & Permissions</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="EmployeeCreation">Employee Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Client">Client Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Message">Message Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Support" asp-action="Lead">Lead Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="TimeLog">Time Log Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Project" asp-action="Task">Task Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Security">Security Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Theme Settings?</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Permissions">Module Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Integration" asp-action="Calendar">Google Calendar Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Index">Custom Link Settings?</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Assets">Asset Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Finance" asp-action="Payroll">Payroll Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Settings" asp-action="Purchase">Purchase Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Employee" asp-action="Recruit">Recruit Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="SMS">SMS Settings</a>
+                        </li><!--end nav-item-->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Settings" asp-controller="Company" asp-action="Planning">Billing</a>
+                        </li><!--end nav-item-->
+                    </ul><!--end nav-->
+                </div><!-- end Settings -->
+            </div><!--end menu-body-->
+        </div><!-- end main-menu-inner-->
+    </div>
+    <!-- end leftbar-tab-menu-->
+
+    <!-- Top Bar Start -->
+    <div class="topbar">
+        <!-- Navbar -->
+        <nav class="navbar-custom" id="navbar-custom">
+            <ul class="list-unstyled topbar-nav float-end mb-0">
+
+                <!--Topbar Email Notification-->
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="false" aria-expanded="false">
+                        <i class="ti ti-mail"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-lg pt-0">
+                        <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
+                            Emails <span class="badge bg-soft-primary badge-pill">3</span>
+                        </h6>
+                        <div class="notification-menu" data-simplebar>
+                            <!-- item-->
+                            <a href="#" class="dropdown-item py-3">
+                                <small class="float-end text-muted ps-2">2 min ago</small>
+                                <div class="media">
+                                    <div class="avatar-md bg-soft-primary">
+                                        <img src="assets/images/users/user-1.jpg" alt="" class="thumb-sm rounded-circle">
+                                    </div>
+                                    <div class="media-body align-self-center ms-2 text-truncate">
+                                        <h6 class="my-0 fw-normal text-dark">Your order is placed</h6>
+                                        <small class="text-muted mb-0">Dummy text of the printing and industry.</small>
+                                    </div><!--end media-body-->
+                                </div><!--end media-->
+                            </a><!--end-item-->
+                        </div>
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                            View all <i class="fi-arrow-right"></i>
+                        </a>
+                    </div>
+                </li>
+                <!--Topbar Message Notification-->
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle arrow-none nav-icon" data-bs-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="false" aria-expanded="false">
+                        <i class="ti ti-bell"></i>
+                        <span class="alert-badge"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-lg pt-0">
+
+                        <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
+                            Notifications <span class="badge bg-soft-primary badge-pill">2</span>
+                        </h6>
+                        <div class="notification-menu" data-simplebar>
+
+                            <!-- item-->
+                            <a href="#" class="dropdown-item py-3">
+                                <small class="float-end text-muted ps-2">10 min ago</small>
+                                <div class="media">
+                                    <div class="avatar-md bg-soft-primary">
+                                        <i class="ti ti-device-computer-camera"></i>
+                                    </div>
+                                    <div class="media-body align-self-center ms-2 text-truncate">
+                                        <h6 class="my-0 fw-normal text-dark">Development Process</h6>
+                                        <small class="text-muted mb-0">We are working on design process</small>
+                                    </div><!--end media-body-->
+                                </div><!--end media-->
+                            </a><!--end-item-->
+                        </div>
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                            View all <i class="fi-arrow-right"></i>
+                        </a>
+                    </div>
+                </li>
+                <!--Topbar Profile-->
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle nav-user" data-bs-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="false" aria-expanded="false">
+                        <div class="d-flex align-items-center">
+                            <img src="~/matrica/assets/images/users/user-3.jpg" alt="profile-user" class="rounded-circle me-2 thumb-sm" />
+                            <div>
+                                <small class="d-none d-md-block font-11">Architecture</small>
+                                <span class="d-none d-md-block fw-semibold font-12">
+                                    Firstlin Sheldon <i class="mdi mdi-chevron-down"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#"><i class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="ti ti-settings font-16 me-1 align-text-bottom"></i> Settings</a>
+                        <div class="dropdown-divider mb-0"></div>
+                        <a class="dropdown-item" href="#"><i class="ti ti-power font-16 me-1 align-text-bottom"></i> Logout</a>
+                    </div>
+                </li>
+            </ul><!--end topbar-nav-->
+
+            <ul class="list-unstyled topbar-nav mb-0">
+                <li>
+                    <button class="nav-link button-menu-mobile nav-icon" id="togglemenu">
+                        <i class="ti ti-menu-2"></i>
+                    </button>
+                </li>
+                <li class="hide-phone app-search" style="display:none;">
+                    @* <form role="search" action="#" method="get">
+                        <input type="search" name="search" class="form-control top-search mb-0" placeholder="Type text...">
+                        <button type="submit"><i class="ti ti-search"></i></button>
+                    </form> *@
+                </li>
+            </ul>
+        </nav>
+        <!-- end navbar-->
+    </div>
+    <!-- Top Bar End -->
+
+    <!-- Page-Wrapper -->
+    <div class="page-wrapper">
+        <!-- Page Content-->
+        <div class="page-content-tab">
+            <div class="container-fluid">
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="float-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">@ViewData["bGParent"]</a>
+                                    </li><!--end nav-item-->
+                                    <li class="breadcrumb-item">
+                                        <a href="#">@ViewData["bParent"]</a>
+                                    </li><!--end nav-item-->
+                                    <li class="breadcrumb-item active">@ViewData["bChild"]</li>
+                                </ol>
+                            </div><!--End Breadcrumb-->
+                            <h4 class="page-title">@ViewData["pTitle"]</h4>
+                        </div><!--end page-title-box-->
+                    </div><!--end col-->
+                </div><!-- end page title -->
+                <!--Start Content-->
+                @RenderBody()
+                <!--end Cotent-->
+            </div><!-- container -->
+            <!-- Footer Start -->
+            <footer class="footer text-center text-sm-start">
+                Office Management System &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                Urben Techies <span class="text-muted d-none d-sm-inline-block float-end"> Crafted with <i class="mdi mdi-heart text-danger"></i> by Aviv Solutions Inc </span>
+            </footer><!-- End Footer -->
+        </div>
+        <!-- end page content -->
+    </div>
+    <!-- End Page-Wrapper -->
+
+    <!-- Javascript  -->
+    <!-- vendor js -->
+    <script src="~/matrica/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/matrica/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/matrica/assets/libs/feather-icons/feather.min.js"></script>
+    <!-- App js -->
+    <script src="~/matrica/assets/js/app.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Javascript End -->
+</body>
+</html>
